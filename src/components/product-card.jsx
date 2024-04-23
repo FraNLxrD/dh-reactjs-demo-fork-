@@ -1,5 +1,5 @@
 import { formatCurrency, replaceImgUrl } from "../utils/utils";
-import RatingStars from "./rating-stars";
+import { RatingStars } from "./rating-stars";
 
 export const ProductCard = ({ data }) => {
   const { title, price, description,thumbnail, rating } = data;

@@ -2,6 +2,7 @@ import { useLoaderData } from "react-router-dom";
 import { SearchInput } from "../components/search-input";
 import { ProductLayout } from "../layouts/product-layout";
 import { formatCurrency, replaceImgUrl } from "../utils/utils";
+import { RatingStars } from "../components";
 
 export default function ProductDetail() {
   const { description, images, price, rating, title, stock, brand } =
@@ -13,7 +14,8 @@ export default function ProductDetail() {
 
       <div className="pdp">
         <h1>
-          <span className="pdp-product_name">{title}</span> - <span>{brand}</span>
+          <span className="pdp-product_name">{title}</span> -{" "}
+          <span>{brand}</span>
         </h1>
 
         <figure className="pdp-images_wrapper">
@@ -40,7 +42,9 @@ export default function ProductDetail() {
         </figure>
 
         <div className="pdp-info">
-          <p className="pdp-price">{formatCurrency(price)}</p>
+          <p className="pdp-price">
+            {formatCurrency(price)} <RatingStars rating={rating} />
+          </p>
           <p className="pdp-stock">Disponibles: {stock} un.</p>
           <p className="pdp-description">{description}</p>
         </div>

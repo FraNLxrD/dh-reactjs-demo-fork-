@@ -1,6 +1,6 @@
 import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
 
-const RatingStars = ({ rating }) => {
+export const RatingStars = ({ rating }) => {
   const fullStars = Math.floor(rating);
   const isHalfStar = rating % 1 !== 0;
 
@@ -19,4 +19,3 @@ const RatingStars = ({ rating }) => {
   );
 };
 
-export default RatingStars;
