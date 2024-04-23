@@ -1,6 +1,6 @@
 # Bazar Online Demo
 
-Aplicación de prueba Frontend para Digital House de Bazar digital.
+Aplicación de prueba Frontend para Digital House de Bazar digital. Permite buscar productos y renderizar una lista de resultados, con posibilidad de ver los detalles de cada producto.
 
 ## Características
 

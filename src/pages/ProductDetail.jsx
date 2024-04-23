@@ -7,25 +7,26 @@ export default function ProductDetail() {
   const { description, images, price, rating, title, stock, brand } =
     useLoaderData();
 
-  console.log();
   return (
     <ProductLayout>
       <SearchInput />
 
-      <div>
+      <div className="pdp">
         <h1>
-          <span>{title}</span> - <span>{brand}</span>
+          <span className="pdp-product_name">{title}</span> - <span>{brand}</span>
         </h1>
 
-        <figure>
+        <figure className="pdp-images_wrapper">
           <img
-            className="main-image"
+            className="pdp-main-image"
             src={replaceImgUrl(images[0])}
             alt={title}
             title={title}
+            width="250"
+            height="248"
           />
-          <ul>
-            {images.map((image) => (
+          <ul className="pdp-images-list">
+            {images.slice(0, 3).map((image) => (
               <li key={image}>
                 <img
                   src={replaceImgUrl(image)}
@@ -38,9 +39,11 @@ export default function ProductDetail() {
           </ul>
         </figure>
 
-        <p>{formatCurrency(price)}</p>
-        <p>Disponibles: {stock}</p>
-        <p>{description}</p>
+        <div className="pdp-info">
+          <p className="pdp-price">{formatCurrency(price)}</p>
+          <p className="pdp-stock">Disponibles: {stock} un.</p>
+          <p className="pdp-description">{description}</p>
+        </div>
 
         <button>Comprar</button>
       </div>

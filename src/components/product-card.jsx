@@ -1,7 +1,8 @@
 import { formatCurrency, replaceImgUrl } from "../utils/utils";
+import RatingStars from "./rating-stars";
 
 export const ProductCard = ({ data }) => {
-  const { title, price, description,thumbnail } = data;
+  const { title, price, description,thumbnail, rating } = data;
 
   return (
     <article className="product-card">
@@ -13,6 +14,7 @@ export const ProductCard = ({ data }) => {
         <p className="pc-description">{description}</p>
         <div>
             <p className="pc-price">{formatCurrency(price)}</p>
+            <RatingStars rating={rating}/>
         </div>
       </div>
     </article>

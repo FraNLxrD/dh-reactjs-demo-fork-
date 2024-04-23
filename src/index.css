@@ -13,6 +13,11 @@ body {
   height: 100%;
 }
 
+#back-to-home {
+  display: block;
+  margin: 1rem 0;
+}
+
 .list a {
   text-decoration: none;
 }
@@ -120,11 +125,55 @@ body {
 }
 
 .pc-price {
-  font-size: 0.875rem;
+  font-size: 1rem;
   color: #fff;
+  margin-bottom: 0;
 }
 
 .pc-description {
   font-size: 0.625rem;
   color: #fff;
+}
+
+/* Detalle del producto */
+
+.pdp{
+  margin-top: 2.5rem;
+}
+
+.pdp-images_wrapper {
+  display: grid;
+  grid-template-columns: 15.625rem 1fr;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.pdp-main-image {
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: 1/1;
+}
+
+.pdp-images-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  justify-content: space-between;
+  height: 100%;
+  padding: 0;
+
+  li {
+    list-style: none;
+    margin: 0;
+  }
+}
+
+
+.pdp-info{
+  text-wrap: pretty;
+}
+
+.pdp-price{
+  font-size: 1.75rem;
+  font-weight: 500;
 }

@@ -1,11 +1,22 @@
-export const RatingStars = ({ rating }) => {
+import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
 
-    // las estrellas tienen un puntaje de 1 a 5
-    // donde puede haber puntajes con decimales
-    // ej: 3.5 estrellas
+const RatingStars = ({ rating }) => {
+  const fullStars = Math.floor(rating);
+  const isHalfStar = rating % 1 !== 0;
 
-    // tengo que respetar esos decimales para "pintar" las estrellas
+  const starsArray = [
+    ...Array(fullStars).fill(<FaStar />),
+    isHalfStar && <FaStarHalfAlt />,
+    ...Array(5 - Math.ceil(rating)).fill(<FaRegStar />),
+  ];
 
-    return 
+  return (
+    <div className="rating-stars">
+      {starsArray.map((star, index) => (
+        <span key={index} className="star">{star}</span>
+      ))}
+    </div>
+  );
+};
 
-}
+export default RatingStars;
