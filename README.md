@@ -1,8 +1,20 @@
-# React + Vite
+# Bazar Online Demo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicación de prueba Frontend para Digital House de Bazar digital.
 
-Currently, two official plugins are available:
+## Características
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Distrubución de carpetas
+- Uso de react-router para navegación dinámica
+- Fetching de datos
+- Renderizado de listas
+- Creación de funciones de utilidad
+- Uso de parámetros de búsqueda
+- Buenas prácticas y HTML semántico
+
+## Stack
+
+- React 
+- Javascript vanilla
+- React Router
+- CSS vanilla
