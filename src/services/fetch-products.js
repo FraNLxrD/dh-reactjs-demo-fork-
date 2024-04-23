@@ -1,20 +1,19 @@
 const BASE_URL =
-  "https://digitalhouse-backend-abril-2024.onrender.com/api/items";
+  "https://digitalhouse-backend-abril-2024.onrender.com/api";
 
 export async function fetchProducts(search) {
-  const url = new URL(BASE_URL);
+  const url = new URL(`${BASE_URL}/items`);
   url.searchParams.set("q", search);
 
   try {
-    const response = await fetch(url);
+    const response = await fetch(url, { signal: AbortSignal.timeout(5000) });
 
     if (!response.ok) {
       throw new Error("Ocurrió un error al buscar los productos");
     }
 
     const data = await response.json();
-    return data
-    
+    return data;
   } catch (err) {
     if (err.name === "AbortError") {
       console.log("La búsqueda tardó demasiado tiempo");
@@ -24,9 +23,8 @@ export async function fetchProducts(search) {
   }
 }
 
-
 export async function fetchProductById(id) {
-  const url = new URL(`${BASE_URL}/${id}`);
+  const url = new URL(`${BASE_URL}/item/${id}`);
 
   try {
     const response = await fetch(url);

@@ -1,6 +1,8 @@
-import { Form } from "react-router-dom";
-
+import { Form, useNavigation } from "react-router-dom";
+import { Loader } from "./ui";
 export const SearchInput = () => {
+  const navigation = useNavigation();
+
   return (
     <Form
       action="/items"
@@ -10,7 +12,7 @@ export const SearchInput = () => {
     >
       <input name="search" type="search" placeholder="laptops,smartphones..." />
       <button type="submit" value="Search">
-        Buscar
+        {navigation.state === "loading" ? <Loader /> : "Buscar"}
       </button>
     </Form>
   );

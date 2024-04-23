@@ -19,9 +19,12 @@ export const router = createBrowserRouter([
       
       return products;
     },
+    ErrorBoundary: () => {
+      return <h1>Ocurrió un error al buscar los productos</h1>;
+    },
   },
   {
-    path: "/items/:id",
+    path: "/item/:id",
     element: <ProductDetail />,
     loader: async ({ params }) => {
       const { id } = params;
@@ -29,13 +32,12 @@ export const router = createBrowserRouter([
 
       return product;
     },
-    errorElement: <h1>Ocurrió un error al buscar el producto</h1>,
-    // ErrorBoundary: () => {
-    //   const params = window.location.pathname.split("/");
+    ErrorBoundary: () => {
+      const params = window.location.pathname.split("/");
 
-    //   return (
-    //     <h1>Ocurrió un error al buscar el producto con ID: {params[2]}</h1>
-    //   );
-    // },
+      return (
+        <h1>Ocurrió un error al buscar el producto con ID: {params[2]}</h1>
+      );
+    },
   },
 ]);

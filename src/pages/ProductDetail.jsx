@@ -42,9 +42,9 @@ export default function ProductDetail() {
         </figure>
 
         <div className="pdp-info">
-          <p className="pdp-price">
+          <div className="pdp-price">
             {formatCurrency(price)} <RatingStars rating={rating} />
-          </p>
+          </div>
           <p className="pdp-stock">Disponibles: {stock} un.</p>
           <p className="pdp-description">{description}</p>
         </div>

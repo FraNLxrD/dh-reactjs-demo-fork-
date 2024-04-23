@@ -10,6 +10,8 @@ export const RatingStars = ({ rating }) => {
     ...Array(5 - Math.ceil(rating)).fill(<FaRegStar />),
   ];
 
+  console.log(starsArray)
+
   return (
     <div className="rating-stars">
       {starsArray.map((star, index) => (

@@ -54,7 +54,7 @@ export default function List() {
         {products.map((product) => (
           <li key={product.id}>
             <a
-              href={`/items/${product.id}`}
+              href={`/item/${product.id}`}
               aria-label={product.title}
               role="link"
             >
