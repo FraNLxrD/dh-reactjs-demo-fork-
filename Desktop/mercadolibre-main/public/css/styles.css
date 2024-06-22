@@ -1,0 +1,243 @@
+.todo{
+    font-family: 'Roboto';
+    font-size: 12px;
+    position: relative;
+    text-align: center;
+    margin: 0px;
+    padding: 0px;    
+    box-sizing: border-box;
+    background-color: #eed130;
+}
+h1{font-size: 24}
+#precios{
+    margin-right: 10px;
+    font-size: 18px;
+}
+#descuentos{
+    font-size: 16px;
+}
+.article{
+    background-color: white;
+}
+#descripciones{
+    display: flex;
+    text-align: left;
+    font-size: 16px;
+    padding: 5px;
+    padding-left: 20px;
+    color:gray ;
+}
+.burger-menu{
+    position: relative;
+    font-size: 1em;
+    text-align: center;
+    color: white;
+    display:flex;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: #1259c3;
+    border-radius: 10px;
+    bottom: 10px;
+    margin: auto;
+}
+.burger-menu i{
+    position: relative;
+    text-align: center;
+    left: 14px;
+    font-size: 10;
+}
+#cosas p{
+    font-size: 20px;
+    position: relative;
+    text-align: center;
+}
+
+.lupa{
+    font-size: 15px;
+    color: black;
+}
+.piepagina{
+    background-color: white;
+    position: relative;
+    text-align: center;
+    padding: 15px;
+}   
+.piepagina i{
+    position: relative;
+    font-size: 2em;
+    text-align: center;
+    color: #1259c3;
+}
+.itemsbarra{
+    font-size: 100%;
+    display: flex;
+    justify-content:space-between;
+    font-size: 20px;
+    margin:auto
+    
+}
+.barra{
+    display: flex;
+    justify-content:space-between;
+    font-size: auto;
+    flex-wrap: wrap;
+   
+}
+
+ul{
+    list-style: none;
+}
+li{
+    margin:8px
+}
+.logo{
+    width: 50%;
+    
+}
+.banner{
+    position: relative;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    margin-bottom: -2px;
+}
+/*.envio{
+    display: flex;
+    justify-content: center;
+    color: green;
+    border: solid green 0.5px;
+    border-width: 1px;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    font-size: 1;
+}*/
+.envio{
+    position: relative;
+    top: 30%;
+}
+.envio > .iconito{
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #39b54a;
+    background-color: #FFF;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: -140px;
+    color: #39b54a;
+}
+
+#descuentos{
+     color: green;  
+     position: relative;
+     text-align: center;
+}
+#precios{
+    position: relative;
+    text-align: center;
+}
+#descripciones{
+    position: relative;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.prod{
+    background-color:#f0ecec;
+    padding: 10px;
+    position: relative;
+    
+   
+}
+@media (min-width: 361px) {
+    .article{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+        margin: 10px;
+    }
+    .burger-menu{
+        display: none;
+    }
+   
+}
+@media (max-width:361px) {
+    #cosas ul{
+        display: none;
+    }
+    img{
+        
+        width: 100%;
+    }
+    header{
+        background-color: #eed130;
+        display: flex;
+        align-items: center; 
+        flex-wrap: wrap;
+        
+    }
+    .textogod{
+        width: 100%;
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    
+}
+@media (min-width: 769px) {
+    .article{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+        padding: auto;
+        margin-left:auto;
+        margin-right:auto;
+    }
+    .textogod{
+        font-size: 20px;
+        width: 50%;
+    }
+}
+.barralupa{
+    text-align: center;
+    width: 50%;
+}
+header{
+    background-color: #eed130;
+    display: flex;
+    align-items: center; 
+}
+.lll h1{
+    text-align: left;
+    font-size: 30px;
+    margin-left: 30px;
+}
+.logo{
+    width: 50%;
+}
+input{
+    width: 50%;
+}
+.productos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: auto;
+}
+*{
+    margin: 0px;
+    padding: 0px;    
+    box-sizing: border-box;
+}
+.presdesc{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 15px;
+    margin-left: 20px;
+    font-weight: bold;
+}
+.article img{
+    border-bottom: solid 1px #f0ecec;
+}
+footer{
+    margin-top: 20px;
+}
